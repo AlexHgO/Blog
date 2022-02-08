@@ -2,7 +2,6 @@
 # Alex personal additions
 /data
 /export
-/figures
 
 # data and output files
 *.rds
@@ -16,9 +15,6 @@
 *.dlib
 *.elib
 *.ssl
-*.pdf
-*.jpg
-*.svg
 *.log
 *.cys
 *.sps
