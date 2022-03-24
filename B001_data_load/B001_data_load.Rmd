@@ -27,7 +27,7 @@ path <- "B001_data_load/"
 
 In this comparison, a data.table and the tidyverse are both loading the same data set, filter based on a numeric column, calculating log10 intensities, count items in groups and calculate the median of a numeric column in groups. Results are plotted with seconds per task.
 
-```{r AH010a_analysis}
+```{r timings}
 
 #timing list
 times <- list()
@@ -93,10 +93,15 @@ p_times_rel <- ggplot(times_rel, aes(x=step, y=mean_rel, label=lab)) +
   xlab("") + ylab("speed increase\n(data.table over tidyverse)") +
   theme_minimal_hgrid()
 
+```
+
+```{r plot, fig.width=10, fig.height=5}
+
 plot_grid(p_times, p_times_rel)
 ggsave2(paste0(path, "figures/DT-vs-TV_speed-increase.pdf"), width = 10, height = 5)
 
 ```
+
 
 ## References
 
